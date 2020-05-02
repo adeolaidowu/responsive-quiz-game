@@ -7,22 +7,31 @@
     <title>Quiz Game</title>
   </head>
   <body>
-    <button class="start">Play Game</button>
-    <div class="page-header">
-      <h1 class="question-number"></h1>
+    <div class="page-overlay">
+      <p class="result hide"></p>
+      <button class="btn start">Play Game</button>
     </div>
-    <div class="scores">
-      <p class="scores__right"></p>
-      <p class="scores__wrong"></p>
-    </div>
+    <main class="main">
+      <div class="page-header">
+        <h1 class="question-number"></h1>
+      </div>
+      <div class="scores">
+        <p class="scores__right"></p>
+        <p class="scores__wrong"></p>
+      </div>
 
-    <h2 class="question"></h2>
-    <div class="options">
-      <ol type="A" class="options__list"></ol>
-    </div>
-    <div class="btn">
-      <button class="submit">Next</button>
-    </div>
+      <div class="question-wrapper">
+        <h2 class="question"></h2>
+        <p class="error-msg"></p>
+        <div class="options">
+          <ol type="A" class="options__list"></ol>
+        </div>
+        <div class="next-btn-container">
+          <button class="btn submit hide">Next</button>
+        </div>
+      </div>
+    </main>
+
     <script type="module" src="scripts/index.js"></script>
   </body>
 </html>

@@ -59,7 +59,7 @@ const setUpPage = (questionsArg, indexArg) => {
     item.addEventListener("click", () => {
       if (playerAnswer !== "") {
         errorMsg.innerText =
-          "You can only answer this question once. Don't be a thief!";
+          "You can only answer this question once. Don't be a thief! 🙃";
       } else {
         playerAnswer = item.innerText;
         checkGame(playerAnswer, questionsArg[indexArg], item, listItems);

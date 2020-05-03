@@ -50,7 +50,7 @@ const questions = [
   {
     question: "Which one of the following is a CSS framework.",
     answer: "Bulma",
-    options: ["Goku", "Contour CSS", "Bulma"],
+    options: ["Goku", "Contour CSS", "Bulma", "Vegeta", "Animate"],
   },
   {
     question: "The 'S' in 'HTTPS' stands for?.",

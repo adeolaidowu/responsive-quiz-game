@@ -117,7 +117,7 @@ const checkGame = (playerResponse, question, listItem, listItems) => {
 
 //function to end game
 const endGame = () => {
-  startBtn.classList.remove("hide");
+  startBtn.classList.remove("hide-opacity");
 
   questionNumHeading.style.opacity = "0";
   questionContainer.style.opacity = "0";
@@ -143,12 +143,12 @@ startBtn.addEventListener("click", () => {
   setDefault();
   gameQuestions = getRandomQuestions(allQuestions);
   document.querySelector(".page-overlay").style.height = "0";
-  startBtn.classList.add("hide");
   mainTag.style.opacity = "1";
   mainTag.classList.remove("hide");
-  startBtn.classList.remove("btn");
+  //startBtn.classList.remove("btn");
   resultPara.classList.add("hide");
   introDiv.classList.add("hide");
+  startBtn.classList.add("hide-opacity");
   setTimeout(() => {
     //debugger;
     playGame();

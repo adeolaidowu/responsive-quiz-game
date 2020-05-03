@@ -22,6 +22,10 @@ body {
   text-align: center;
 }
 
+.hide-opacity {
+  opacity: 0;
+}
+
 .hide {
   display: none;
 }
@@ -118,8 +122,8 @@ h6 {
   background-color: #55c57a;
   width: 50%;
   margin: 0 auto;
-  padding: 2rem 3rem;
   font-size: 1.6rem;
+  padding: 2rem 3rem;
   border-radius: 3px;
   opacity: 0;
 }
@@ -197,19 +201,19 @@ h6 {
     font-size: 5px;
   }
   .main {
-    padding: 15rem 0;
+    padding: 10rem 0;
   }
   .question-number {
     font-size: 6rem;
   }
   .question {
-    font-size: 3rem;
+    font-size: 4rem;
     min-height: 6rem;
     margin-bottom: 3rem;
     line-height: 1.7;
   }
   .question-wrapper {
-    width: 70%;
+    width: 80%;
   }
   .options__item {
     font-size: 3rem;
@@ -223,13 +227,16 @@ h6 {
   }
   .scores {
     width: 65%;
+    font-size: 2.6rem;
   }
+
   .start {
     font-size: 3rem;
     padding: 2rem 3.5rem;
     font-weight: 700;
     position: absolute;
     top: 25%;
+    transition: all 0.6s;
     animation: bounce 1s ease-in-out infinite;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
   }

@@ -195,22 +195,37 @@ h6 {
   html {
     font-size: 5px;
   }
-
+  .main {
+    padding: 15rem 0;
+  }
+  .question-number {
+    font-size: 6rem;
+  }
   .question {
-    font-size: 2rem;
+    font-size: 3rem;
     height: 6rem;
+    margin-bottom: 7rem;
+    line-height: 1.7;
+  }
+  .question-wrapper {
+    width: 70%;
   }
   .options__item {
-    font-size: 1.5rem;
-    padding: 1rem;
+    font-size: 3rem;
+    padding: 2rem;
   }
   .submit {
-    font-size: 1.6rem;
+    font-size: 3rem;
     font-weight: 200;
+    padding: 2rem;
     width: 100%;
   }
+  .scores {
+    width: 65%;
+  }
   .start {
-    font-size: 1.6rem;
+    font-size: 3rem;
+    padding: 2rem 3.5rem;
     font-weight: 700;
     position: absolute;
     top: 25%;
@@ -225,17 +240,27 @@ h6 {
   }
   .intro {
     position: absolute;
-    top: 35%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
 
   .intro__text {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     text-align: center;
   }
   .intro__side-note {
     font-size: 1.8rem;
+  }
+  .page-header {
+    padding-top: 15rem;
+  }
+
+  .result {
+    font-size: 3.5rem;
+  }
+  .error-msg {
+    font-size: 2.5rem;
   }
 }
 

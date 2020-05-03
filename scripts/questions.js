@@ -1,4 +1,4 @@
-const questions = [
+const allQuestions = [
   {
     question: "NodeJS was written in?",
     answer: "C++",
@@ -50,7 +50,7 @@ const questions = [
   {
     question: "Which one of the following is a CSS framework.",
     answer: "Bulma",
-    options: ["Goku", "Contour CSS", "Bulma", "Vegeta", "Animate"],
+    options: ["Goku", "Contour CSS", "Bulma"],
   },
   {
     question: "The 'S' in 'HTTPS' stands for?.",
@@ -79,6 +79,64 @@ const questions = [
     answer: "Gal Gadot",
     options: ["Gal Gadot", "Emilia Clarke", "Jennifer Lawrence"],
   },
+
+  //next 15 questions
+  {
+    question: "Who is the worlds richest man as of April 2020?",
+    answer: "Jeff Bezos",
+    options: ["Bill Gates", "Jeff Bezos", "Bernard Arnault"],
+  },
+  {
+    question: "Which of these is not an array method?",
+    answer: "Split",
+    options: ["Split", "Reverse", "Join"],
+  },
+  {
+    question: "What team is the richest football club in England?",
+    answer: "Manchester United",
+    options: ["Liverpool", "Manchester City", "Manchester United"],
+  },
+  {
+    question: "Who was Harry's first crush in Harry Potter",
+    answer: "Cho Chang",
+    options: ["Ginny Weasley", "Cho Chang", "Hermione Granger"],
+  },
+  {
+    question:
+      "Select which of the following that is not a low-level programming language",
+    answer: "Python",
+    options: ["C++", "Python", "Java"],
+  },
+  {
+    question: "The TV show The Big Bang Theory ran for how many seasons?",
+    answer: "12",
+    options: ["13", "12", "11"],
+  },
+  {
+    question: "The COVID-19 pandemic broke out in what province in China?",
+    answer: "Wuhan",
+    options: ["Guangzhou", "Shanghai", "Wuhan"],
+  },
+  {
+    question: "Who is the founder of Alibaba?",
+    answer: "Jack Ma",
+    options: ["Jack Ma", "Jeff Bezos", "Bill Gates"],
+  },
+  {
+    question: "Steve Jobs is most famous for?",
+    answer: "Apple",
+    options: ["Samsung", "Apple", "Nokia"],
+  },
+  {
+    question: "The name Meredith Grey is synonymous with what TV show?",
+    answer: "Grey's Anatomy",
+    options: ["Chicago Fire", "Grey's Anatomy", "Modern Family"],
+  },
+  {
+    question: "Jim Parsons is best known the role of?",
+    answer: "Sheldon Cooper",
+    options: ["Harvey Specter", "Jackson Avery", "Sheldon Cooper"],
+  },
 ];
 
-export default questions;
+export default allQuestions;

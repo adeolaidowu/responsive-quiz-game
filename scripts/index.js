@@ -1,4 +1,4 @@
-import questions from "./questions.js";
+import allQuestions from "./questions.js";
 
 const errorMsg = document.querySelector(".error-msg");
 const questionNumHeading = document.querySelector(".question-number");
@@ -10,21 +10,15 @@ const submitBtn = document.querySelector(".submit");
 const startBtn = document.querySelector(".start");
 const resultPara = document.querySelector(".result");
 const introDiv = document.querySelector(".intro");
-//const randomQuestions = []
+const mainTag = document.querySelector(".main");
+const scoresDiv = document.querySelector(".scores");
 let playerAnswer = "";
 let questionNum = 1;
 let currentIndex = 0;
 let rightScore = 0;
 let wrongScore = 0;
-
-console.log(questions.length);
-//function to randomly select a question
-const pickRandomQuestion = () => {
-  const randomNum = Math.floor(Math.random() * questions.length);
-  const randomQuestion = questions[randomNum];
-  return randomQuestion;
-};
-
+let gameQuestions;
+//function to generate 5 random questions
 const getRandomQuestions = (questions) => {
   const randomQuestions = [];
   const questionsLength = questions.length;
@@ -37,11 +31,12 @@ const getRandomQuestions = (questions) => {
   }
   return randomQuestions;
 };
-let randomQuestions = getRandomQuestions(questions);
+
+//let randomQuestions = getRandomQuestions(questions);
 
 // function that populates page with question and other html elements
 const displayRandomQuestionPage = (que) => {
-  questionNumHeading.innerText = `Question ${questionNum} of ${randomQuestions.length}`;
+  questionNumHeading.innerText = `Question ${questionNum} of 5`;
   rightScoresPara.innerText = `Correct: ${rightScore}`;
   wrongScoresPara.innerText = `Wrong: ${wrongScore}`;
   questionContainer.innerText = que.question;
@@ -52,13 +47,14 @@ const displayRandomQuestionPage = (que) => {
     olNode.appendChild(listItem);
   });
 };
-
+//function to prepare DOM elements for user interaction
 const setUpPage = (questionsArg, indexArg) => {
   displayRandomQuestionPage(questionsArg[indexArg]);
   //if player has not made a selection disable next button
   playerAnswer === "" && submitBtn.setAttribute("disabled", true);
 
   const listItems = document.querySelectorAll(".options__item");
+  //add a click listener for all options to know when player makes selection
   listItems.forEach((item) => {
     item.addEventListener("click", () => {
       if (playerAnswer !== "") {
@@ -74,8 +70,9 @@ const setUpPage = (questionsArg, indexArg) => {
 };
 
 //function that plays a round of the game
-const playGame = (questions) => {
-  setUpPage(questions, currentIndex);
+const playGame = () => {
+  // debugger;
+  setUpPage(gameQuestions, currentIndex);
   //button to move to next question
   submitBtn.addEventListener("click", () => {
     if (playerAnswer !== "") {
@@ -86,7 +83,7 @@ const playGame = (questions) => {
       errorMsg.innerText = "";
       //debugger;
       questionNum++;
-      setUpPage(questions, currentIndex);
+      setUpPage(gameQuestions, currentIndex);
     }
   });
 };
@@ -121,6 +118,9 @@ const checkGame = (playerResponse, question, listItem, listItems) => {
 //function to end game
 const endGame = () => {
   startBtn.classList.remove("hide");
+
+  questionNumHeading.style.opacity = "0";
+  questionContainer.style.opacity = "0";
   document.querySelector(".page-overlay").style.height = "100vh";
   startBtn.classList.add("btn");
 };
@@ -133,33 +133,29 @@ const setDefault = () => {
   rightScore = 0;
   wrongScore = 0;
   questionNum = 1;
+  scoresDiv.style.opacity = "0";
+  submitBtn.style.opacity = "0";
+  //mainTag.style.display = "none";
 };
-
-//function to restart game
-const restartGame = () => {};
 
 //button to start playing game
 startBtn.addEventListener("click", () => {
   setDefault();
+  gameQuestions = getRandomQuestions(allQuestions);
   document.querySelector(".page-overlay").style.height = "0";
   startBtn.classList.add("hide");
+  mainTag.style.opacity = "1";
+  mainTag.classList.remove("hide");
   startBtn.classList.remove("btn");
   resultPara.classList.add("hide");
   introDiv.classList.add("hide");
   setTimeout(() => {
-    playGame(getRandomQuestions(questions));
+    //debugger;
+    playGame();
     submitBtn.classList.remove("hide");
+    scoresDiv.style.opacity = "1";
+    submitBtn.style.opacity = "1";
+    questionNumHeading.style.opacity = "1";
+    questionContainer.style.opacity = "1";
   }, 1000);
 });
-
-// //button to move to next question
-// submitBtn.addEventListener("click", () => {
-//   //debugger;
-//   olNode.innerHTML = "";
-//   playerAnswer = "";
-//   errorMsg.innerText = "";
-//   questionNum++;
-//   playGame(randomQuestions, index);
-//   console.log(index);
-//   index++;
-// });

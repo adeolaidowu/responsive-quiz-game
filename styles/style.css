@@ -61,6 +61,8 @@ h6 {
   top: 0;
   left: 0;
   z-index: -1;
+  opacity: 0;
+  transition: all 1s;
 }
 
 .btn {
@@ -119,6 +121,7 @@ h6 {
   padding: 2rem 3rem;
   font-size: 1.6rem;
   border-radius: 3px;
+  opacity: 0;
 }
 
 .scores__right,
@@ -140,6 +143,7 @@ h6 {
 .question {
   font-size: 3rem;
   margin-bottom: 2rem;
+  height: 10rem;
 }
 
 .error-msg {
@@ -176,6 +180,7 @@ h6 {
   color: #eee;
   border-radius: 5px;
   text-align: center;
+  opacity: 0;
 }
 
 .submit:hover {
@@ -193,9 +198,11 @@ h6 {
 
   .question {
     font-size: 2rem;
+    height: 6rem;
   }
   .options__item {
     font-size: 1.5rem;
+    padding: 1rem;
   }
   .submit {
     font-size: 1.6rem;
@@ -254,5 +261,4 @@ h6 {
   100% {
     transform: translateY(-2px);
   }
-  fr
 }

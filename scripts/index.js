@@ -18,6 +18,7 @@ let currentIndex = 0;
 let rightScore = 0;
 let wrongScore = 0;
 let gameQuestions;
+
 //function to generate 5 random questions
 const getRandomQuestions = (questions) => {
   const randomQuestions = [];
@@ -31,8 +32,6 @@ const getRandomQuestions = (questions) => {
   }
   return randomQuestions;
 };
-
-//let randomQuestions = getRandomQuestions(questions);
 
 // function that populates page with question and other html elements
 const displayRandomQuestionPage = (que) => {
@@ -71,17 +70,14 @@ const setUpPage = (questionsArg, indexArg) => {
 
 //function that plays a round of the game
 const playGame = () => {
-  // debugger;
   setUpPage(gameQuestions, currentIndex);
   //button to move to next question
   submitBtn.addEventListener("click", () => {
     if (playerAnswer !== "") {
       currentIndex++;
-      //debugger;
       olNode.innerHTML = "";
       playerAnswer = "";
       errorMsg.innerText = "";
-      //debugger;
       questionNum++;
       setUpPage(gameQuestions, currentIndex);
     }
@@ -150,7 +146,6 @@ startBtn.addEventListener("click", () => {
   introDiv.classList.add("hide");
   startBtn.classList.add("hide-opacity");
   setTimeout(() => {
-    //debugger;
     playGame();
     submitBtn.classList.remove("hide");
     scoresDiv.style.opacity = "1";

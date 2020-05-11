@@ -53,24 +53,6 @@ const displayRandomQuestionPage = (que) => {
       selectedOptions.push(randomOption);
     }
   }
-  // for(let i = 0; i < optionsLength; i++){
-  //   const randomNum = Math.floor(Math.random() * optionsLength);
-  //   const randomOption = options[randomNum];
-  //   if(!selectedOptions.includes(randomOption)){
-  //     let listItem = document.createElement("li");
-  //   listItem.innerText = randomOption;
-  //   listItem.classList.add("options__item");
-  //   olNode.appendChild(listItem);
-  //   selectedOptions.push(randomOption)
-  //   }
-  //   if(selectedOptions.length === 3) break;
-  // }
-  // que.options.forEach((option) => {
-  //   let listItem = document.createElement("li");
-  //   listItem.innerText = option;
-  //   listItem.classList.add("options__item");
-  //   olNode.appendChild(listItem);
-  // });
 };
 //function to prepare DOM elements for user interaction
 const setUpPage = (questionsArg, indexArg) => {

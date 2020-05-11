@@ -99,7 +99,7 @@ const allQuestions = [
   {
     question: "Who was Harry's first crush in Harry Potter",
     answer: "Cho Chang",
-    options: ["Ginny Weasley", "Cho Chang", "Hermione Granger"],
+    options: ["Ginny Weasley", "Cho Chang", "Fleur Delacour"],
   },
   {
     question:
